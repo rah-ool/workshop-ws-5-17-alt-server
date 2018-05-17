@@ -11,6 +11,11 @@ def index():
 def hello_world():
     return "Hello World!"
 
+@app.route("/howdy")
+def howdy_world():
+    return render_template(
+    'howdy.html',**locals())
+
 @app.route("/hello/<string:name>/")
 def hello(name):
     quotes = [ "'If people do not believe that mathematics is simple, it is only because they do not realize how complicated life is.' -- John Louis von Neumann ",
